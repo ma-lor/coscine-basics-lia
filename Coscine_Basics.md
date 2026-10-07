@@ -41,13 +41,13 @@ Seit 2018 wird Coscine an der RWTH Aachen entwickelt.
 **Die wichtigsten Funktionen**
 
  - Daten speichern: Pro Projekt können bis zu 125 TB Speicherplatz beantragt werden. 100 GB pro Projekt können Sie ohne einen Antrag nutzen.
- - Daten beschreiben: Sie können Ihre Daten mit Metadaten (Informationen über die Daten) beschreiben, damit sie nachvollziehbar bleiben.
+ - Daten beschreiben: Alle Daten müssen mit Metadaten (Informationen über die Daten) beschrieben werden, damit sie nachvollziehbar bleiben.
  - (Meta-)Daten teilen: Metadaten können öffentlich sichtbar (innerhalb von Coscine) eingestellt werden. Die Daten selbst sind nicht frei zugänglich, können jedoch für ausgewählte Personen (z.B. Projektpartner:innen) zugänglich gemacht werden. Alle anderen können eine Anfrage per E-Mail versenden.
 
 **Die Struktur**
 
  - (Sub-)Projekte: Es können beliebig viele (Sub-)Projekte erstellt werden. Sie helfen dabei, den Überblick zu behalten. Vergleichen können Sie das mit der Ordnerstruktur auf Ihrem Computer. 
- - Ressourcen: Hier legen Sie fest, wie und wo Ihre Daten gespeichert werden. Es gibt 5 Ressourcentypen.
+ - Ressourcen: Hier legen Sie fest, wie und wo Ihre Daten gespeichert werden. Es gibt 5 Ressourcentypen die im Kapitel "Ressourcen und Metadatenprofile" genauer beschrieben werden.
  - Metadatenprofil: Ein Metadatenprofil ist immer an eine Ressource gebunden. Es gibt den Rahmen vor, mit welchen Informationen die Daten beschrieben werden, z.B. Erhebungsdatum, Erhebungsmethode. 
 
 ![Struktur in Coscine](./media/Coscine_Struktur.png)
@@ -129,11 +129,11 @@ In diesem Kapitel lernen Sie, wie Sie eine Ressource erstellen.
 Mit dem Ressourcentyp legen Sie fest, wo Ihre Daten gespeichert sein sollen. So gibt es z.B. die Möglichkeit, Daten über Coscine auf dem DataStorage.nrw zu speichern oder nur einen Datensatz zu verlinken, der bereits an einem anderen Ort gespeichert ist (z.B. GitLab).
 
 |||
-| Web | Web-Ressource des Datastorage.nrw. Bis zu 100 GB Speicherplatz ist kein Antrag erforderlich. Auf Antrag auch mehr Speicherplatz möglich. Zugriff nur über Webinterface oder API. |
+| Web | Web-Ressource des Datastorage.nrw. Bis zu 100 GB Speicherplatz ist kein Antrag erforderlich. Auf Antrag auch mehr Speicherplatz möglich. Zugriff nur über Webinterface oder API. Dies ist der "Standard" Ressourcentyp wenn Ihre Daten in Coscine gespeichert werden. |
 | S3 | S3-Ressource des Datastorage.nrw. Für die S3-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz pro Speicherplatz-Antrag möglich. Zugriff erfolgt über Webinterface, API oder S3-Client. |
-| WORM | WORM-Ressource des Datastorage.nrw für besonders vor Manipulation zu schützende Daten. Daten können nach dem Speichern nicht mehr gelöscht oder verändert werden (Write Once Read Many). Für die WORM-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz möglich. |
-| GitLab | Sie können ein GitLab-Projekt mit Coscine verknüpfen und so alle Dateien, die im GitLab Projekt liegen, in Coscine mit Metadaten beschreiben. Die Daten verbleiben weiterhin in GitLab, die Metadaten werden in Coscine gespeichert. |
-| Linked Data | Sie können Dateien, die an einem anderen Speicherort liegen, mit einem persistenten Link in Coscine verknüpfen und dort die Dateien mit Metadaten beschreiben. Auch hier bleiben die Daten am ursprünglichen Speicherort. |
+| WORM | WORM-Ressource des Datastorage.nrw für besonders vor Manipulation zu schützende Daten. Daten können nach dem Speichern nicht mehr gelöscht oder verändert werden (Write Once Read Many). Für die WORM-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz möglich. Dieser Typ ist nur in Sonderfällen relevant. Beraten Sie sich mit ihrem lokalen Coscine Support wenn Sie überlegen eine WORM Ressource zu beantagen. |
+| GitLab | Sie können ein GitLab-Projekt mit Coscine verknüpfen und so alle Dateien, die im GitLab Projekt liegen, in Coscine mit Metadaten beschreiben. Die Daten verbleiben weiterhin in GitLab, die Metadaten werden in Coscine gespeichert. Da bei dieser Resource die Daten selbst nicht in Coscine gespeichert werden kann sie auch genutzt werden wenn Sie nicht Teil einer Institution sind, die Speicher in Coscine zur Verfügung stellt. |
+| Linked Data | Sie können Dateien, die an einem anderen Speicherort liegen, mit einem persistenten Link in Coscine verknüpfen und dort die Dateien mit Metadaten beschreiben. Auch hier bleiben die Daten am ursprünglichen Speicherort. Da bei dieser Resource die Daten selbst nicht in Coscine gespeichert werden kann sie auch genutzt werden wenn Sie nicht Teil einer Institution sind, die Speicher in Coscine zur Verfügung stellt. |
 ***
 
 {{2-3}}
@@ -142,7 +142,7 @@ Mit dem Ressourcentyp legen Sie fest, wo Ihre Daten gespeichert sein sollen. So 
 
 Im zweiten Schritt wählen Sie ein Metadatenprofil. Dies bestimmt die Eingabefelder für die Metadaten (z.B. Ersteller:in, Erhebungsmethode, Datentyp, Lizenz…). Einige Profile und Standards sind in Coscine bereits vorgegeben (z.B. BASE oder EngMeta). Wenn Sie kein passendes Profil für Ihre Daten finden, dann können Sie auch ein eigenes erstellen und beantragen.
 
-> Hinweis: Das ausgewählte Metadatenprofil kann im Nachgang nicht mehr geändert werden.
+> Hinweis: Das ausgewählte Metadatenprofil kann im Nachgang nicht mehr geändert werden. Wenn Sie das Profil später wechseln wollen müssen Sie die Resource löschen und von vorne beginnen. Es lohnt sich also, sorgfältig zu planen.
 ***
 
 {{3-4}}
@@ -194,7 +194,7 @@ In diesem Kapitel lernen Sie, wie Sie Forschungsdaten hochladen, herunterladen, 
 
 **Upload**
 
-Sofern Sie eine "Web" Ressource erstellt haben, können Sie nun Daten über Coscine hochladen. Sie können entweder einzelne Datein hochladen oder auch mehrere Dateien auf einmal. Ziehen Sie die Datein einfach in die Weboberfläche von Coscine oder laden Sie die Dateien über die Buttons "Datei auswählen" und "Hochladen" hoch. Sobald Sie Ihre Daten ausgewählt haben, müssen Sie diese rechts mit Metadaten beschreiben. Danach können Sie die Daten final hochladen.
+Sofern Sie eine "Web" Ressource erstellt haben, können Sie nun Daten über Coscine hochladen. Sie können entweder einzelne Dateien hochladen oder auch mehrere Dateien auf einmal. Ziehen Sie die Dateien einfach in die Weboberfläche von Coscine oder laden Sie die Dateien über die Buttons "Datei auswählen" und "Hochladen" hoch. Sobald Sie Ihre Daten ausgewählt haben, müssen Sie diese rechts mit Metadaten beschreiben. Danach können Sie die Daten final hochladen.
 
 Wenn Sie eine "Linked Data" Ressource erstellt haben, können Sie keine Daten direkt in Coscine hochladen. Stattdessen verlinken Sie Daten, die in einer anderen Speicherumgebung gespeichert sind. Anschließend beschreiben Sie diese mit Metadaten. Nur die Metadaten sind nun in Coscine hinterlegt. Neben diesen beiden Varianten besteht auch die Möglichkeit, Daten automatisiert über die API hochzuladen oder über den S3-Client, wenn Sie eine S3-Ressource gewählt haben. Weitere Informationen zur [API](https://docs.coscine.de/de/api/api/) und zu [S3-Clients](https://docs.coscine.de/de/resources/s3-clients/) finden Sie in der Coscine-Dokumentation.
 

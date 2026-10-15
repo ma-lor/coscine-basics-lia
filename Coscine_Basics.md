@@ -9,7 +9,7 @@ Es gibt verschiedene Möglichkeiten Coscine zu nutzen.
 Der Fokus in diesem Kurs liegt ausschließlich auf der Weboberfläche und zielt darauf ab, grundlegende Funktionen zu vermitteln.
 Die Kapitel greifen Inhalte der [Coscine Dokumentation](https://docs.coscine.de/de) auf, die vom [IT Center der RWTH Aachen University](https://www.itc.rwth-aachen.de/cms/it-center/services/forschung/~smhwy/coscine/) zur Verfügung gestellt wird.
 
-> Coscine wird am IT Center der RWTH Aachen laufend weiterentwickelt und verbessert, weshalb einige Inhalte dieses Kurses vom aktuellen Entwicklungsstand abweichen können. Die Inhalte beziehen sich auf den Entwicklungsstand von Oktober 2024.
+> Coscine wird am IT Center der RWTH Aachen laufend weiterentwickelt und verbessert, weshalb einige Inhalte dieses Kurses vom aktuellen Entwicklungsstand abweichen können. Die Inhalte beziehen sich auf den Entwicklungsstand von Oktober 2026.
 
 **Aufwand**  
 
@@ -24,7 +24,7 @@ Abhängig davon, wie intensiv Sie den Kurs bearbeiten, beläuft sich die Dauer a
 >
 > Nutzungshinweis und Feedback
 >
-> Der Kurs baut auf den Inhalten des bereits veröffentlichten [Workshop-Konzepts](https://doi.org/10.5281/zenodo.12804571) auf und befindet sich aktuell noch in einer Testphase. Teilen Sie uns gerne Ihre Meinung zum Kurs mit.
+> Der Kurs baut auf den Inhalten des bereits veröffentlichten [Workshop-Konzepts](https://doi.org/10.5281/zenodo.12804571) auf.
 >
 > Dieses Werk ist lizenziert unter einer [Creative Commons Namensnennung 4.0 International Lizenz](https://creativecommons.org/licenses/by/4.0/deed.de).
 >
@@ -64,7 +64,7 @@ Seit 2018 wird Coscine an der RWTH Aachen entwickelt.
 **Profileinstellungen**
 
 |||
-|Persönliche Angaben    | Titel, Vorname, Familienname, E-Mail, Organisation, Disziplin (vgl. Spalte „Fachkollegium“ der [DFG-Fachsystematik](https://www.dfg.de/resource/blob/172316/5863ef132d178054609f74940f6a27c9/fachsystematik-2016-2019-de-grafik-data.pdf))|
+|Persönliche Angaben    | Titel, Vorname, Familienname, E-Mail, Organisation, Disziplin (vgl. Spalte „Fachkollegium“ der [DFG-Fachsystematik](https://www.dfg.de/de/ueber-uns/gremien/fachkollegien/fachsystematik))|
 |Zugriffstoken erstellen| Ermöglicht den automatisierten Zugriff auf alle Projekte und Dateien über die API. Mehr dazu in der [Coscine Dokumentation](https://docs.coscine.de/de/token/).|
 |Nutzendenpräferenzen   | Einstellung der bevorzugten Sprache (deutsch oder englisch)|
 |Verbundene Accounts    | Verknüpfung des Kontos mit anderen Accounts (z.B. ORCiD)|
@@ -131,7 +131,7 @@ Mit dem Ressourcentyp legen Sie fest, wo Ihre Daten gespeichert sein sollen. So 
 |||
 | Web | Web-Ressource des Datastorage.nrw. Bis zu 100 GB Speicherplatz ist kein Antrag erforderlich. Auf Antrag auch mehr Speicherplatz möglich. Zugriff nur über Webinterface oder API. Dies ist der "Standard" Ressourcentyp wenn Ihre Daten in Coscine gespeichert werden. |
 | S3 | S3-Ressource des Datastorage.nrw. Für die S3-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz pro Speicherplatz-Antrag möglich. Zugriff erfolgt über Webinterface, API oder S3-Client. |
-| WORM | WORM-Ressource des Datastorage.nrw für besonders vor Manipulation zu schützende Daten. Daten können nach dem Speichern nicht mehr gelöscht oder verändert werden (Write Once Read Many). Für die WORM-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz möglich. Dieser Typ ist nur in Sonderfällen relevant. Beraten Sie sich mit ihrem lokalen Coscine Support wenn Sie überlegen eine WORM Ressource zu beantagen. |
+| WORM | WORM-Ressource des Datastorage.nrw für besonders vor Manipulation zu schützende Daten. Daten können nach dem Speichern nicht mehr gelöscht oder verändert werden (Write Once Read Many). Für die WORM-Ressource muss ein Antrag gestellt werden. Es sind bis zu 125 TB Speicherplatz möglich. Dieser Typ ist nur in Sonderfällen relevant. Beraten Sie sich mit ihrem lokalen Coscine Support wenn Sie überlegen eine WORM Ressource zu beantragen. |
 | GitLab | Sie können ein GitLab-Projekt mit Coscine verknüpfen und so alle Dateien, die im GitLab Projekt liegen, in Coscine mit Metadaten beschreiben. Die Daten verbleiben weiterhin in GitLab, die Metadaten werden in Coscine gespeichert. Da bei dieser Resource die Daten selbst nicht in Coscine gespeichert werden kann sie auch genutzt werden wenn Sie nicht Teil einer Institution sind, die Speicher in Coscine zur Verfügung stellt. |
 | Linked Data | Sie können Dateien, die an einem anderen Speicherort liegen, mit einem persistenten Link in Coscine verknüpfen und dort die Dateien mit Metadaten beschreiben. Auch hier bleiben die Daten am ursprünglichen Speicherort. Da bei dieser Resource die Daten selbst nicht in Coscine gespeichert werden kann sie auch genutzt werden wenn Sie nicht Teil einer Institution sind, die Speicher in Coscine zur Verfügung stellt. |
 ***
